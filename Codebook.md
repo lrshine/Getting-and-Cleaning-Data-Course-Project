@@ -3,6 +3,7 @@ Getting and Cleaning Data Course Project
 Variable names and their descriptions:
 
 fileURL - URLto the website where the data for the project was downloaded
+
 mainDir - Directory that is used to download to and extract project files
 X_Train - Dataframe that contains 'training' data collected from Samsung accelerometers on volunteers who performed 6 activities 
 Y_Train - Dataframe that contains the 'training' labels for X_Train dataset
