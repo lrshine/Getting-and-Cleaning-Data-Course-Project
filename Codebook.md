@@ -41,3 +41,22 @@ subOneDataFrame - Dataframe that contains final subset of training and test data
 ActivityName - Dataframe that links the class labels with their activity name.
 
 TidyData - Dataframe that contains the averages of each fully descriptive variable for each identified activity and each subject.
+
+
+Data Transformations:
+
+subOneDataFrame$Activity <- factor(subOneDataFrame$Activity,levels=c(ActivityName$ActivityID),labels=ActivityName$Activity) - Change Activity ID's to actual names of the activity: Walking, Standing, etc.
+
+gsub("BodyBody","Body",names(subOneDataFrame)) - Remove the additional 'Body' from feature name - cosmetic
+
+gsub("Acc","Accelerometer",names(subOneDataFrame)) - Extend acronym 'Acc' to full name Accelerometer
+
+gsub("^t","time",names(subOneDataFrame)) - Extend shortname 't' to full name Time
+
+gsub("^f","frequency",names(subOneDataFrame)) - Extend shortname 'f' to full name Frequency
+
+gsub("Gyro", "Gyroscope",names(subOneDataFrame)) - Extend shortname Gyro to full name Gyroscope
+
+gsub("Mag","Magnitude",names(subOneDataFrame)) - Extend shortname Mag to full name Magnitude
+
+TidyData <- TidyData[order(TidyData$Participant,TidyData$NotedActivity),] - Reorder the data by Participant first, then each activity
