@@ -1,6 +1,8 @@
 # Getting-and-Cleaning-Data-Course-Project
 
-This project collects, works with and clean a data set.  Run_analysis.R performs the following tasks:
+This project collects, works with and clean a data set related to wearable computing. The data used in this project is linked to from the course website and represents data collected from accelerometers from the Samsung Galaxy S smartphone.  
+
+Run_analysis.R performs the following tasks:
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts measurements on the mean and standard deviation for each measurement.
